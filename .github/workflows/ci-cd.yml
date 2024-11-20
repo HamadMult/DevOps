@@ -3,29 +3,29 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # Trigger the workflow on push to the 'main' branch
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Run the job on the latest Ubuntu runner
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3  # Checkout the code from the repository
+      uses: actions/checkout@v3
 
-    - name: Set up Node.js
+    - name: Set up Node.js 16
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Specify the Node.js version (adjust based on your app)
+        node-version: '16'  # Specify Node.js 16 explicitly
 
     - name: Install dependencies
-      run: npm install  # Install project dependencies
+      run: npm install
 
     - name: Run tests
-      run: npm test  # Run tests (make sure you have a test script in package.json)
+      run: npm test
 
     - name: Build project
-      run: npm run build  # Optionally, run a build script if you have one
+      run: npm run build
 
     - name: Deploy to Staging
-      run: npm run deploy  # Run a deployment script (make sure it's defined in package.json)
+      run: npm run deploy
