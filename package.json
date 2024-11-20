@@ -1,0 +1,12 @@
+{
+  "name": "devops",
+  "version": "1.0.0",
+  "description": "This project aims to demonstrate the principles and practices of **DevOps** (Development and Operations). By integrating tools and workflows such as version control, Continuous Integration (CI), Continuous Delivery (CD), and containerization, this project automates and streamlines software development and deployment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
